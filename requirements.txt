@@ -1,0 +1,10 @@
+torch 
+transformers==4.31.0 
+accelerate==0.21.0 
+sentencepiece==0.1.99 
+tokenizers==0.13.3 
+datasets==2.14.4 
+tqdm 
+zstandard 
+einops 
+bitsandbytes
