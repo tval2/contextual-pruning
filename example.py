@@ -11,7 +11,6 @@ try:
 except:
     print("Failed to load bitsandbytes, 8bit not available.")
     print("transformers library may fail to load in Windows when bitsandbytes is installed and code is not being run from Jupyter Notebook")
-    pass
 import transformers as tfmr
 
 
@@ -92,8 +91,7 @@ if __name__ == "__main__":
     model_perplexity = show_model_stats(pruned_model, testenc, base_preplexity)
 
     #reset dataset for fine-tuning
-    dataset_ft = load_dataset('wikitext', 'wikitext-2-raw-v1', split='test')
-    dataset_ft = dataset_ft.shuffle(seed=42)
+    dataset_ft = make_text_datasets(seed=42, datasets_to_load=["wiki_test"])["wiki_test"]
     tokenizer.pad_token = ' '
     tokenized_inputs = tokenizer("\n\n".join(dataset_ft['text']), return_tensors="pt", truncation=True, max_length=512, padding="max_length")
     tokenized_dataset = LLMTokenizedDataset(tokenized_inputs)

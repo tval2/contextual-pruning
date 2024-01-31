@@ -12,7 +12,6 @@ try:
 except:
     print("Failed to load bitsandbytes, 8bit not available.")
     print("transformers library may fail to load in Windows when bitsandbytes is installed and code is not being run from Jupyter Notebook")
-    pass
 import transformers as tfmr
 
 from datetime import datetime
@@ -156,7 +155,6 @@ class ModelManager:
         calib_set = calib_set if calib_set is not None else self.calib_set
         precision = precision if precision is not None else (8 if self.use_8bit else 32)
         state_name = f"linear={linear_thresh},activ={activ_thresh},embed={embed_thresh},embed_prune_set={embed_prune_set},calib={calib_set},prec={precision}"
-        # state_name = f"l-{linear_thresh},a-{activ_thresh},e-{embed_thresh},epset-{embed_prune_set},cset-{calib_set},p-{precision}"
         return state_name
     
     def current_state_name(self):
@@ -202,12 +200,7 @@ class ModelManager:
             question_results[dataset_name].append(result)
         return result
     
-    def eval(self, dataset_name, batch_size=2048, eval_func=evaluate, rerun=False):
-        # Setup tokenizer
-        # self._pad_token_backup = self.tokenizer.pad_token
-        # if pad_token is not None:
-        #     self.tokenizer.pad_token = pad_token
-        
+    def eval(self, dataset_name, batch_size=2048, eval_func=evaluate, rerun=False):        
         # Setup dataset
         test_data = self.convert_dataset(dataset_name)
 
@@ -233,7 +226,6 @@ class ModelManager:
                 dataset_results[dataset_name].append(result)
             
         return result
-        # self.tokenizer.pad_token = self._pad_token_backup
     
     def save_results(self, save_path="auto", indent_size=4):
         if save_path is None or save_path == "auto":
@@ -303,9 +295,6 @@ class ModelManager:
         if not self.use_8bit:
             self.model.to(torch.float32)
         rerun = True
-        # rerun = False
-        # if len(fine_tune_dict["tuned_on"]) >= 2 and fine_tune_dict["tuned_on"][-1]["perplexity"] != fine_tune_dict["tuned_on"][-2]["perplexity"]:
-        #     rerun = True
         if run_eval:
             self.eval(dataset_name, rerun=rerun)
             for question_set in eval_question_sets:
