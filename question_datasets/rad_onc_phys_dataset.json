@@ -1,0 +1,405 @@
+{
+    "context": "Radiation Oncology Physics Test:",
+    "questions": {
+        "Which of the following particles cannot be accelerated by an electric field?": {
+            "choices": ["Protons", "Electrons", "Neutrons", "Positrons"],
+            "answer": 2
+        },
+        "The mass of Carbon-12 (12C) is than the sum of the masses of 6 protons and 6 neutrons.": {
+            "choices": ["slightly smaller", "slightly larger", "equal to", "All of the above are possible."],
+            "answer": 0
+        },
+        "The binding energies for tungsten\u2019s K, L, and M shells are 70, 11, and 2 keV, respectively. A 50 keV photon interacts with tungsten through the photoelectric effect. What are the possible energies of the emitted photoelectron?": {
+            "choices": ["a continuous spectrum from 2 keV to 70 keV", "39 keV and 48 keV", "9 keV, 59 keV and 68 keV", "9 keV"],
+            "answer": 1
+        },
+        "Which of the following statements is true regarding the x-ray spectrum of an x-ray tube?": {
+            "choices": ["The maximum photon energy is determined by the kVp.", "The maximum photon energy is determined by the target material.", "The characteristic photon energies are determined by the tube current.", "The characteristic photon energies are determined by the filtration."],
+            "answer": 0
+        },
+        "The half value layer (HVL) for an x-ray beam is 2 mm aluminum. What is the minimum thickness of aluminum required to reduce the x-ray exposure by 50%?": {
+            "choices": ["1 mm", "2 mm", "3 mm", "4 mm"],
+            "answer": 1
+        },
+        "Which of the following component provides the high-power RF fields to accelerate electrons in a LINAC?": {
+            "choices": ["Thyratron", "Target", "Electron gun", "Magnetron"],
+            "answer": 3
+        },
+        "What is the purpose of the \u201ctongue and groove\u201d design of multileaf collimator (MLC)?": {
+            "choices": ["Reduce frictions between leaves.", "Reduce leakage doses between leaves.", "Increase speed of leaves.", "Increase field sizes for treatments."],
+            "answer": 1
+        },
+        "When a LINAC is used to treat patients in electron mode, which of the following hardware is not needed?": {
+            "choices": ["Target", "Electron gun", "Monitor chamber", "Scattering foil"],
+            "answer": 0
+        },
+        "Compared to a flattened beam, the flattening filter free beam .": {
+            "choices": ["Has higher average energy.", "Is more penetrating.", "Has a higher dose rate.", "Increases treatment time."],
+            "answer": 2
+        },
+        "The mass attenuation coefficient has the highest dependence on the atomic number of the medium and the energy of the incoming photon energy for .": {
+            "choices": ["Photoelectric effect", "Compton scattering", "Pair production", "Rayleigh scatter"],
+            "answer": 0
+        },
+        "Which of the following is not an interaction between photons and a medium?": {
+            "choices": ["Photoelectric effect", "Compton scattering", "Pair production", "Bremsstrahlung"],
+            "answer": 3
+        },
+        "When the energy of the scattered photon is the minimum in a Compton interaction, what is the angle of the emitted Compton electron relative to the direction of the initial photon?": {
+            "choices": ["0\n\u25e6", "45\u25e6", "90\u25e6", "180\u25e6"],
+            "answer": 0
+        },
+        "What is the relationship between the mass attenuation coefficient \u00b5/\u03c1, mass energy transfer coefficient (\u00b5tr/\u03c1), and the mass energy absorption coefficient (\u00b5en/\u03c1)?": {
+            "choices": ["\u00b5tr/\u03c1 \u2265 \u00b5en/\u03c1 \u2265 \u00b5/\u03c1", "\u00b5en/\u03c1 \u2265 \u00b5tr/\u03c1 \u2265 \u00b5/\u03c1", "\u00b5/\u03c1 \u2265 \u00b5en/\u03c1 \u2265 \u00b5tr/\u03c1", "\u00b5/\u03c1 \u2265 \u00b5tr/\u03c1 \u2265 \u00b5en/\u03c1"],
+            "answer": 3
+        },
+        "How does the KERMA compare to the absorbed dose for a 15 MV photon beam at 10 cm depth in a water phantom?": {
+            "choices": ["The KERMA is greater than the absorbed dose.", "The KERMA is equal to the absorbed dose.", "The KERMA is less than the absorbed dose.", "The relationship between KERMA and the absorbed dose can\u2019t be determined."],
+            "answer": 2
+        },
+        "Which of the following beams will not produce a buildup effect in the percent depth dose curve?": {
+            "choices": ["X-rays from a 100 kVp x-ray tube.", "Gamma-rays from 60Co.", "6 MV x-rays from a LINAC.", "18 MV x-rays from a LINAC."],
+            "answer": 0
+        },
+        "Which device below is the most suitable for measuring lateral beam profiles?": {
+            "choices": ["Diodes", "Farmer chambers", "Plane parallel ionization chambers", "Geiger-Muller counter"],
+            "answer": 0
+        },
+        "Four exposed films have the same optical density of 1.25. If all four films are placed on top of each other, what is the fraction of light that can transmit through?": {
+            "choices": ["20%", "1%", "0.1%", "0.01%", "0.001%"],
+            "answer": 4
+        },
+        "Which of the following devices is not suitable for in-vivo dose measurements?": {
+            "choices": ["Diodes", "Thermoluminescent dosimeters (TLDs)", "Ionization chambers", "Optically stimulated luminescence dosimeters (OSLDs)"],
+            "answer": 2
+        },
+        "According to TG-51, which of the following correction factors is not needed when converting the measured charge to the generated charge in the ionization chamber?": {
+            "choices": ["Temperature and pressure correction", "Recombination correction", "Scatter correction", "Polarity correction"],
+            "answer": 2
+        },
+        "For a farmer chamber calibrated at the standard temperature and pressure, which is the PTP factor for a local temperature of 23\u25e6C and pressure of 720 mmHg?": {
+            "choices": ["0.97", "0.99", "1.03", "1.06"],
+            "answer": 3
+        },
+        "How is the beam quality defined in TG-51?": {
+            "choices": ["Nominal beam energy", "Tenth value layer", "Average beam energy", "%dd(10)x"],
+            "answer": 3
+        },
+        "According to TG-51, a LINAC should have dose calibration in water tank .": {
+            "choices": ["Every day", "Every month", "Every year", "Every other year"],
+            "answer": 2
+        },
+        "Why is TMR always larger than PDD at depths larger than dmax?": {
+            "choices": ["PDD includes both beam attenuation and beam divergence.", "PDD includes beam attenuation but does not include beam divergence.", "TMR includes both beam attenuation and beam divergence.", "TMR does not include beam attenuation but does include beam divergence."],
+            "answer": 0
+        },
+        "Which of the following changes will result in a larger geometric penumbra?": {
+            "choices": ["Increasing SSD.", "Increasing the source to collimator distance.", "Reducing the source size.", "Move the patient closer to the collimator."],
+            "answer": 0
+        },
+        "The output of a 6 MV beam is 1 cGy/MU at SSD=100 cm, depth=1.5 cm and field size 10 cm x10 cm. What is the output at SSD=98.5 cm, depth=1.5 cm and field size 10 cm x10 cm?": {
+            "choices": ["0.985 cGy/MU", "0.97 cGy/MU", "1.015 cGy/MU", "1.03 cGy/MU"],
+            "answer": 3
+        },
+        "For a single field SAD treatment, the output at dmax is 1.02 cGy and the TMR at depth 10 cm is 0.7. What is the MU needed to delivery 100 cGy at depth 10 cm?": {
+            "choices": ["100", "102", "140", "160"],
+            "answer": 2
+        },
+        "What wedge angle will produce the most uniform dose distribution for two treatment fields separated by 100\u25e6 ?": {
+            "choices": ["30\u25e6", "40\u25e6", "50\u25e6", "60\u25e6"],
+            "answer": 1
+        },
+        "A patient\u2019s spine is treated by two adjacent fields with SSD=100 cm. The field lengths (symmetrical fields) in the superior-inferior directions are 20 cm and 24 cm, respectively. What is the gap in the skin to match the two spine fields at depth 10 cm?": {
+            "choices": ["1.0 cm", "1.5 cm", "2.0 cm", "2.2 cm"],
+            "answer": 3
+        },
+        "For a craniospinal treatment treated with symmetrical fields, the field length for the upper spine field is 25 cm, and the field size for the lateral cranial fields are 20 cm x 20 cm. What is the collimator rotation angle for the cranial fields to align with the divergence of the spine fields?": {
+            "choices": ["3\n\u25e6", "5\n\u25e6", "7\n\u25e6", "9\n\u25e6"],
+            "answer": 2
+        },
+        "The dose-volume-histogram (DVH) contains the following information except:": {
+            "choices": ["Location of the hot spot", "Mean dose", "Minimum dose", "Maximum dose"],
+            "answer": 0
+        },
+        "What dose D5%=20 Gy to the heart on a DVH curve means?": {
+            "choices": ["5% of the heart receives exactly 20 Gy.", "5% of the heart receives less than 20 Gy.", "95% of the heart receives more than 20 Gy.", "95% of the heart receives less than 20 Gy."],
+            "answer": 3
+        },
+        "Which of the following parameters is sometimes changed by the dosimetrist during treatment planning?": {
+            "choices": ["Dose for each treatment fraction", "Total treatment dose", "Number of treatment fractions", "Number of beams"],
+            "answer": 3
+        },
+        "For electron radiation therapy, which electron energy has the minimum PDD on the surface?": {
+            "choices": ["6 MeV", "9 MeV", "12 MeV", "16 MeV", "20 MeV"],
+            "answer": 0
+        },
+        "Electron PDD has a low dose tail after the practical range. Which physical process is related to the generation of this tail?": {
+            "choices": ["Compton scattering", "Bremsstrahlung radiation", "Characteristic x-rays", "Pair production"],
+            "answer": 1
+        },
+        "Which of the following treatments is suitable for SSD setup?": {
+            "choices": ["Four fields box for a pelvic treatment", "Multiple fields IMRT treatment", "Electron boost to chest wall of breast cancer", "VMAT treatment with two arcs"],
+            "answer": 2
+        },
+        "Which of the following statements is true for electron effective SSD?": {
+            "choices": ["It increases with increasing electron energy.", "It is equal to the distance from the x-ray sources to the isocenter.", "It is larger than the distance from the x-ray sources to the isocenter.", "It is independent of electron energy."],
+            "answer": 0
+        },
+        "What is the range of a 6 MeV electron beam in the lung (0.25 g/cm3 )?": {
+            "choices": ["3 cm", "6 cm", "9 cm", "12 cm"],
+            "answer": 3
+        },
+        "What is inverse planning in IMRT?": {
+            "choices": ["Choosing best beam angles.", "Choosing appropriate beam modifiers such as wedges and compensators.", "Optimizing beam fluence based on the desired dose constraints.", "Adding beam block to protect organs at risk."],
+            "answer": 2
+        },
+        "What is the purpose of the leaf sequencing algorithm in IMRT planning?": {
+            "choices": ["It converts optimized fluence to the achievable fluence by MLC.", "It converts cost functions to the optimized fluence.", "It converts achievable fluence to dose.", "It converts desirable constraints to cost functions."],
+            "answer": 0
+        },
+        "The dose gradient achievable in an IMRT plan is approximately .": {
+            "choices": ["0.1%/mm", "1%/mm", "10%/mm", "50%/mm"],
+            "answer": 2
+        },
+        "Which of the following devices is not appropriate for IMRT patient QA?": {
+            "choices": ["Electronic portal imaging device", "Film and ionization chamber", "Diode Array", "Single ionization chamber"],
+            "answer": 3
+        },
+        "Which parameter below is not typically set by a dosimetrist during IMRT treatment planning?": {
+            "choices": ["Beam energy", "Beam angle", "Beam weight", "Upper and lower dose constraints"],
+            "answer": 2
+        },
+        "For material with HU=10, what is the ratio of linear attenuation coefficients between this material to water?": {
+            "choices": ["1.01", "1.1", "0.99", "0.9"],
+            "answer": 0
+        },
+        "Which of the following methods can improve the spatial resolution of CT?": {
+            "choices": ["Increasing tube voltage.", "Increasing field of view.", "Decreasing field of view.", "Decreasing tube current."],
+            "answer": 2
+        },
+        "Why can\u2019t MR images replace CT for accurate dose calculations in radiation therapy?": {
+            "choices": ["MR images have inferior soft tissue contrast than CT.", "MR images have worse spatial resolution than CT.", "MR images deliver more ionization doses to the patient than CT.", "MR images do not have information about electron density."],
+            "answer": 3
+        },
+        "The velocity of ultrasound in soft tissue is 1500 m/s. The time to receive a signal after sending a pulse is 0.1 ms. What is the depth of the anatomical interface?": {
+            "choices": ["5 cm", "7.5 cm", "10 cm", "15 cm"],
+            "answer": 1
+        },
+        "Which of the following imaging modalities utilizes non-ionizing radiation?": {
+            "choices": ["MRI", "PET", "CT", "Radiograph"],
+            "answer": 0
+        },
+        "Which of the following statements is true about the spatial resolution of PET images?": {
+            "choices": ["PET images spatial resolution is better than CT and MRI.", "PET images spatial resolution increases when the average energy of the emitted positrons\ndecrease.", "PET images spatial resolution increases when the number of detectors in the ring decreases.", "PET images spatial resolution is better than 1 mm."],
+            "answer": 1
+        },
+        "Which information below is not stored in a DICOM RT plan file?": {
+            "choices": ["Patient name", "Treatment angles", "CT scanner parameters, such as kVp, mAs", "Prescription dose"],
+            "answer": 2
+        },
+        "A 4D CT has 10 phases, 200 slices in each phase. Each slice has 512x512 pixels, where each pixel uses 2 bytes. How long does it take to transfer this 4D CT over the internet with a transfer speed of 2 GB/second?": {
+            "choices": ["0.2 s", "0.5 s", "1.0 s", "2.0 s"],
+            "answer": 1
+        },
+        "As compared to diagnostic CT, which statement below is not true for CT simulator?": {
+            "choices": ["CT simulator usually has a larger bore size than diagnostic CT.", "CT simulator gives better image spatial resolution and contrast than diagnostic CT.", "CT simulator needs extra laser for localizing the treatment isocenter.", "CT simulator needs accurate geometry and HU for the whole body."],
+            "answer": 1
+        },
+        "Which techniques below do not result in a reduced setup margin for planning target volume (PTV)?": {
+            "choices": ["Change weekly IGRT to daily IGRT.", "Change the setup from laser to IGRT.", "Add fiducial markers to the target.", "Change 3D CRT plan to IMRT plan."],
+            "answer": 3
+        },
+        "To get the best soft tissue contrast for a head and neck cancer treatment, which IGRT method is preferred?": {
+            "choices": ["MV portal imaging", "kV orthogonal planar images", "kV cone-beam CT", "Surface imaging"],
+            "answer": 2
+        },
+        "Which of the following IGRT methods is not used for IMRT treatment?": {
+            "choices": ["MV portal image.", "kV orthogonal planar images.", "kV cone-beam CT.", "CT on-rail."],
+            "answer": 0
+        },
+        "Which IGRT method gives the lowest dose?": {
+            "choices": ["MV portal image", "MV cone-beam CT", "kV orthogonal planar images", "kV cone-beam CT"],
+            "answer": 2
+        },
+        "Prostate motion can\u2019t be tracked by .": {
+            "choices": ["Infrared surface imaging.", "Implanted RF beacons.", "Implanted fiducial markers and fluoroscopy imaging.", "MR images in MR-LINAC."],
+            "answer": 0
+        },
+        "Which of the following is not an advantage of free-breathing gating for treating a lung tumor?": {
+            "choices": ["Reduced internal target volume.", "Reduced dose to organ at risk.", "Reduced treatment time.", "Patient is comfortable in free breathing."],
+            "answer": 2
+        },
+        "4D CT is not needed for a .": {
+            "choices": ["tumor near the diaphragm", "tumor in the brain", "tumor in the lung", "tumor in the liver"],
+            "answer": 1
+        },
+        "Is not a method for management of respiratory motion in radiation therapy.": {
+            "choices": ["Deep-inspiration breath hold (DIBH).", "Real-time tumor tracking.", "IGRT using cone-beam CT.", "Free-breathing respiratory gating."],
+            "answer": 2
+        },
+        "The half-life for a radioactive nuclide is 69 days. How much does it decay in one day?": {
+            "choices": ["0.5%", "0.7%", "1.0%", "1.5%"],
+            "answer": 2
+        },
+        "Which statement is correct for an HDR source, 192Ir, with activity 10 Ci?": {
+            "choices": ["Its decay rate is equivalent to about 10 grams of 226Ra.", "Its decay rate is equivalent to about 1 gram of 226Ra.", "Its decay rate is 37 GBq.", "Its decay rate is 3.7 GBq."],
+            "answer": 0
+        },
+        "The physical and effective half-lives for an unsealed isotope are 6 hours and 2 hours, respectively. What is the biological half-life?": {
+            "choices": ["12 hours", "8 hours", "4 hours", "3 hours"],
+            "answer": 3
+        },
+        "What is the initial dose rate for a prostate 125I seed implant to deliver a total dose of 120 Gy?": {
+            "choices": ["4.9 cGy/h", "5.9 cGy/h", "7.0 cGy/h", "7.9 cGy/h"],
+            "answer": 1
+        },
+        "According to AAPM TG-43, has the greatest anisotropy correction.": {
+            "choices": ["192Ir", "137Cs", "226Ra", "125I"],
+            "answer": 3
+        },
+        "Which of the following is not a limitation of AAPM TG-43?": {
+            "choices": ["The absorption and scattering in the source is not considered.", "The applicator is treated as water.", "The dose delivered while the source is in transit is usually ignored.", "The patient is treated as water."],
+            "answer": 0
+        },
+        "Why is the radial dose function, g(r), approximately constant for an 192Ir source for values of r less than 5 cm?": {
+            "choices": ["There is no attenuation for the first 5 cm.", "Attenuation is included in the geometry factor.", "Attenuation is compensated by the increased scatter.", "Attenuation is included in the anisotropy factor."],
+            "answer": 2
+        },
+        "An HDR vaginal cylinder case with a 3 cm diameter is planned to deliver 700 cGy to vaginal tissue at 5 mm from the cylinder surface. What is the approximate dose to the surface of the cylinder?": {
+            "choices": ["1244 cGy", "933 cGy", "700 cGy", "500 cGy"],
+            "answer": 1
+        },
+        "To get a uniform dose at 5 mm from the cylinder surface in HDR vaginal treatment, the source dwell times .": {
+            "choices": ["are the same at all dwell points.", "are longer at the ends.", "are longer in the middle.", "are longer at the superior end than the inferior end."],
+            "answer": 1
+        },
+        "Why is the prescription dose for permanent prostate implant seeds lower when using 103Pd as opposed to 125I?": {
+            "choices": ["The half-life for 103Pd is shorter.", "The energy of emitted photon for 103Pd is larger.", "The radial dose function g(r) for 103Pd is larger.", "The anisotropy function for 103Pd is larger."],
+            "answer": 0
+        },
+        "Is not performed for HDR daily QA.": {
+            "choices": ["Source position accuracy check", "Survey meter function check", "Radiation monitor function check", "Source calibration"],
+            "answer": 3
+        },
+        "Is the most appropriate device to find a lost radionuclide seed in the operation room.": {
+            "choices": ["A well ionization chamber", "A Farmer chamber", "A Geiger-Muller counter", "A diode"],
+            "answer": 2
+        },
+        "Which of the following tests is not a typical procedure for HDR brachytherapy?": {
+            "choices": ["Calibrating the source when a new source is used.", "Changing the source at a frequency of 3-4 months.", "Performing daily QA in the days only when patient treatment is scheduled.", "Performing patient surveys only before the treatment."],
+            "answer": 3
+        },
+        "Which statement below is true for TBI treatment?": {
+            "choices": ["Lung block is always needed when lateral opposed beams are used.", "FFF mode is used to increase the dose rate.", "The extended SSD increases the dose uniformity.", "The treatment is faster than it is for regular patients."],
+            "answer": 2
+        },
+        "The maximum field size for a LINAC is 40 cm x 40 cm, and the height of a TBI patient is 180 cm. What is the minimum SSD required for the TBI treatment with a collimator angle of 0\u25e6 ?": {
+            "choices": ["250 cm", "350 cm", "450 cm", "550 cm"],
+            "answer": 2
+        },
+        "In total skin electron therapy (TSET), why is the gantry angle about 20\u25e6 such that the central axis is above patient\u2019s head and below patient\u2019s feet?": {
+            "choices": ["To minimize the dose from x-ray contaminations.", "To maximize the dose from x-ray contaminations.", "To increase the SSD.", "To reduce treatment time."],
+            "answer": 0
+        },
+        "Is not an appropriate delivery method for intraoperative radiotherapy (IORT).": {
+            "choices": ["MeV Electrons", "MV photons", "HDR Brachytherapy", "kV x-rays"],
+            "answer": 1
+        },
+        "Which of the following statements correctly describe the lateral penumbras of therapeutic proton beams?": {
+            "choices": ["They are always larger than penumbras of MV x-rays in LINAC.", "They are always smaller than penumbras of MV x-rays in LINAC.", "They do not change with depth.", "They increase with depth."],
+            "answer": 3
+        },
+        "Is not needed for a dedicated nozzle for proton pencil beam scanning.": {
+            "choices": ["A dose monitor chamber", "Scanning magnets", "A range modulation wheel", "A spot position monitor"],
+            "answer": 2
+        },
+        "Which of the following statements is correct regarding range straggling in proton therapy?": {
+            "choices": ["It is due to the statistical uncertainty in energy loss.", "It results in about 3.5% range uncertainty.", "It can be minimized by robust optimization.", "It is the same as range uncertainty."],
+            "answer": 0
+        },
+        "Why do proton machines require a large gantry to bend protons, but LINACs don\u2019t?": {
+            "choices": ["Protons at 250 MeV have a higher speed than electrons at 6-20 MeV.", "The mass of protons is about 1800 times more than the mass of electrons.", "Protons have positive charge while electrons have negative charge.", "Protons do not generate x-rays by Bremsstrahlung radiation."],
+            "answer": 1
+        },
+        "Which of the following statements is incorrect regarding intensity-modulated proton therapy (IMPT)?": {
+            "choices": ["An IMPT plan can be robust with robustness optimization.", "IMPT is more conformal than double scattering.", "IMPT is less sensitive to motion than double scattering.", "IMPT by pencil beam scanning needs less hardware than double scattering."],
+            "answer": 2
+        },
+        "Which of the following statements about RBE for protons is correct?": {
+            "choices": ["It is always a constant 1.1 for all depths.", "It is the highest at the shallow depth.", "It is the highest at the center of spread-out Bragg peak.", "It is the highest at the distal fall off depth."],
+            "answer": 3
+        },
+        "Which device is not appropriate to measure the lateral profile of small fields in SRS?": {
+            "choices": ["Diode", "Pin-point ionization chamber", "Farmer chamber", "Diamond detector"],
+            "answer": 2
+        },
+        "What is the purpose of using tertiary collimators in SRS technique?": {
+            "choices": ["To reduce the penumbra.", "To reduce treatment time.", "To reduce collisions.", "To merge multiple isocenters to a single isocenter."],
+            "answer": 0
+        },
+        "Which of the following statements is not true about SRS?": {
+            "choices": ["A flattening filter free (FFF) can\u2019t be used in SRS technique.", "A Winston-Lutz test is required to verify the coincidence between radiation and mechanical\nisocenters.", "The SRS field may not have lateral charge particle equilibrium (CPE).", "Both frame-based and frame-less systems are feasible for SRS."],
+            "answer": 0
+        },
+        "When planning for SRS/SBRT, which of the following statements is not typically a priority?": {
+            "choices": ["Rapid dose fall off outside of target.", "Homogenous dose inside the target.", "Conformality index to be close to 1.", "Gradient index to be as small as possible."],
+            "answer": 1
+        },
+        "Compared to regular fractionated treatment, is not required for SRS technique.": {
+            "choices": ["a smaller CT slice thickness", "a smaller dose calculation grid", "a higher output accuracy", "a higher precision in the coincidence of beam and gantry/couch isocenters."],
+            "answer": 2
+        },
+        "Which SRS delivery technique can treat two brain metastases simultaneously using a single isocenter treatment plan.": {
+            "choices": ["Arc plan with dynamic MLC.", "Arc plan with cones.", "Dynamic conformal Arc.", "Arc plan with static MLC."],
+            "answer": 0
+        },
+        "Is a test for MLC leaf positions.": {
+            "choices": ["Start shot for gantry isocentricity.", "Winston-Lutz test.", "Start shot for MLC isocentricity.", "Picket fence test."],
+            "answer": 3
+        },
+        "According to TG-142, which test does not need to be performed daily?": {
+            "choices": ["Door interlock", "Output", "Light field and radiation field coincidence", "Laser accuracy"],
+            "answer": 2
+        },
+        "Which of the following parameters is the most important for cone beam CT (CBCT) used in IGRT?": {
+            "choices": ["HU accuracy", "Coincidence between the CBCT isocenter and the radiation beam isocenter", "Spatial resolution", "Field of view"],
+            "answer": 1
+        },
+        "According to TG-142, which is the tolerance for monthly output constancy?": {
+            "choices": ["0.5%", "1%", "2%", "3%"],
+            "answer": 2
+        },
+        "The quality assurance test for is not addressed in TG-142.": {
+            "choices": ["CT simulator", "MLC", "CBCT", "Planar MV imager"],
+            "answer": 0
+        },
+        "Which of the following parameters is not needed in shielding calculations for the 2nd barriers?": {
+            "choices": ["Distance.", "Occupancy factor.", "Use factor.", "Workload."],
+            "answer": 2
+        },
+        "What is the occupancy factor used in shielding design for the nurse station next to a LINAC room?": {
+            "choices": ["1", "1/5", "1/20", "1/40"],
+            "answer": 0
+        },
+        "The proper order of materials for LINAC treatment room doors (from inside to outside) is .": {
+            "choices": ["Steel, Borated polyethylene, Lead", "Lead, Borated polyethylene, Steel", "Borated polyethylene, Lead, Steel", "Borated polyethylene, Steel, Lead"],
+            "answer": 0
+        },
+        "How many TVLs are needed to reduce the exposure rate to 1/5 of the original value?": {
+            "choices": ["0.3", "0.5", "0.7", "1.0"],
+            "answer": 2
+        },
+        "Has the highest radiation weighting factor.": {
+            "choices": ["6 MV x-rays", "250 MeV protons", "6 MeV electrons", "100 keV neutrons"],
+            "answer": 3
+        },
+        "Which of the following errors is not considered a Radiation Medical Event for a 5-fraction SBRT prostate treatment?": {
+            "choices": ["A total dose deviation of 25%.", "The wrong patient was treated.", "A single fraction dose deviation of 45%.", "Dose was delivered to the liver."],
+            "answer": 2
+        },
+        "Which of the following factors is not needed for a FMEA process map in CT simulation of lung cancer?": {
+            "choices": ["Documenting immobilization devices used in CT sim.", "Verifying bore size of CT sim.", "Verifying HU accuracy of CT Sim in daily QA.", "Verifying correct patient before CT Sim."],
+            "answer": 1
+        }
+    }
+}

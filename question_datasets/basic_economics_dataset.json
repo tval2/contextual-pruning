@@ -1,0 +1,385 @@
+{
+    "context": "Economics Test:",
+    "questions": {
+        "Economics may best be defined as a": {
+            "choices": ["scientific study of supply and demand.", "study of efforts to satisfy seemingly unlimited wants with scarce resources.", "limited description of economic activities.", "branch of sociology."],
+            "answer": 1
+        },
+        "A basic requirement for survival is a(n)": {
+            "choices": ["need.", "want.", "opportunity cost.", "paradox of value."],
+            "answer": 0
+        },
+        "The purchase and use of goods and services to impress others is called": {
+            "choices": ["trade-offs.", "factor markets.", "conspicuous consumption.", "circular flow of money."],
+            "answer": 2
+        },
+        "Productivity goes up whenever": {
+            "choices": ["more resources are discovered.", "the same output is produced with fewer inputs.", "there is a movement along the production possibilities frontier.", "a product gains additional utility."],
+            "answer": 1
+        },
+        "Division of labor is a characteristic of": {
+            "choices": ["home craft businesses.", "skilled artisans.", "assembly line production.", "entrepreneurship."],
+            "answer": 2
+        },
+        "To arrive at an economic decision, a decision-making grid may be used to evaluate": {
+            "choices": ["alternative choices of action.", "productivity.", "only durable goods.", "only capital goods."],
+            "answer": 0
+        },
+        "The production possibilities frontier can be used to illustrate all of the following EXCEPT": {
+            "choices": ["total output when all resources are fully employed.", "trade-offs.", "opportunity costs of unemployment.", "specialization and the division of labor."],
+            "answer": 3
+        },
+        "Manufactured goods needed to produce other goods and services are called": {
+            "choices": ["nondurable goods.", "payroll expenses.", "capital goods.", "consumer goods.\nName:"],
+            "answer": 2
+        },
+        "For a consumer, the most important reason for a purchase is its": {
+            "choices": ["durability.", "color.", "entertainment value.", "utility."],
+            "answer": 3
+        },
+        "A popular model used to illustrate the concept of opportunity cost is called": {
+            "choices": ["the production possibilities frontier.", "laissez-faire.", "entrepreneurship.", "factors of production."],
+            "answer": 0
+        },
+        "Land, labor, capital, and entrepreneurship are the": {
+            "choices": ["results of supply and demand.", "basis of employment.", "result of production.", "factors of production."],
+            "answer": 3
+        },
+        "An economy at its production possibility frontier is operating": {
+            "choices": ["with minimum growth.", "at full potential.", "on quota-filling production.", "with high unemployment."],
+            "answer": 1
+        },
+        "A risk-taker in search of profits is called a(n)": {
+            "choices": ["entrepreneur.", "capitalist.", "economist.", "conspicuous consumer."],
+            "answer": 0
+        },
+        "Durable goods intended for final use by individuals are called": {
+            "choices": ["heavy equipment.", "payroll expenses.", "capital goods.", "consumer goods."],
+            "answer": 3
+        },
+        "A great variety of goods and services is characteristic of": {
+            "choices": ["a traditional economy.", "a market economy.", "a command economy.", "all economic systems."],
+            "answer": 1
+        },
+        "The American economic system can be described as having a": {
+            "choices": ["command economy.", "quota system.", "traditional system.", "market economy"],
+            "answer": 3
+        },
+        "The concept of voluntary exchange means": {
+            "choices": ["that no money was exchanged.", "using the barter system.", "that people freely and willingly engage in market transactions.", "that only workers will benefit from a transaction.\nName:"],
+            "answer": 2
+        },
+        "Choices in a command economy are made by": {
+            "choices": ["private business.", "assembly line workers.", "competition.", "government agencies."],
+            "answer": 3
+        },
+        "Which group of people ultimately determines the products that a free enterprise economy produces?": {
+            "choices": ["Congress", "property owners", "consumers", "local officials"],
+            "answer": 2
+        },
+        "Both parties to a transaction benefit according to": {
+            "choices": ["voluntary exchange.", "consumer sovereignty.", "fixed income.", "command economy."],
+            "answer": 0
+        },
+        "North Korea is an example of": {
+            "choices": ["capitalism.", "a command economy.", "a market economy.", "free enterprise."],
+            "answer": 1
+        },
+        "An economic system is successful when it": {
+            "choices": ["creates a large number of wealthy people.", "maintains normal unemployment levels.", "controls government agencies.", "satisfies the needs of its people."],
+            "answer": 3
+        },
+        "An entrepreneur would most likely have the best chance for success in": {
+            "choices": ["a command economy.", "a market economy.", "a traditional economy.", "any of the economies."],
+            "answer": 1
+        },
+        "Changes in a market economy tend to be": {
+            "choices": ["revolutionary.", "prohibited.", "gradual.", "discouraged."],
+            "answer": 2
+        },
+        "The most common form of business organization in the United States is the": {
+            "choices": ["sole proprietorship.", "corporation.", "cooperative.", "partnership."],
+            "answer": 0
+        },
+        "In a limited partnership": {
+            "choices": ["one partner is not active in the daily operations.", "both partners share the work load.", "neither partner is responsible to the other.", "all partners are responsible to a corporation.\nName:"],
+            "answer": 0
+        },
+        "The price paid to use another's money is called": {
+            "choices": ["dividends.", "interest.", "principal.", "stocks."],
+            "answer": 1
+        },
+        "An advantage of a merger between two companies is": {
+            "choices": ["improved production and efficiency.", "establishing a legal monopoly.", "increasing cost.", "establishing a voluntary transaction."],
+            "answer": 0
+        },
+        "One weakness of the sole proprietorship is that the": {
+            "choices": ["owner has no control.", "business depends solely on the owner.", "owner has too many partners.", "business is in constant danger of bankruptcy."],
+            "answer": 1
+        },
+        "The owner of shares in a corporation is a": {
+            "choices": ["proprietor.", "stockholder.", "partner.", "manager."],
+            "answer": 1
+        },
+        "A sole proprietor": {
+            "choices": ["does not have to pay a separate business tax.", "is exempt from paying any taxes.", "must rely on government subsidies.", "has partners in the business."],
+            "answer": 0
+        },
+        "One advantage enjoyed by a corporation is": {
+            "choices": ["unlimited liability.", "ease of management.", "unlimited life.", "ease of obtaining a charter."],
+            "answer": 2
+        },
+        "When firms involved in different steps of manufacturing or marketing merge, the result is a": {
+            "choices": ["multinational merger.", "horizontal merger.", "conglomeration.", "vertical merger."],
+            "answer": 3
+        },
+        "As a consumer, if the price of apples doubles and your salary remains the same, you would probably": {
+            "choices": ["buy more apples.", "buy the same number of apples.", "buy fewer apples.", "buy more complementary goods."],
+            "answer": 2
+        },
+        "If the price of a product decreases and consumers buy more of the product,": {
+            "choices": ["a change in demand has taken place.", "a change in quantity demanded has taken place.", "the product is a complementary product.", "there has been an increase in demand.\nName:"],
+            "answer": 1
+        },
+        "An entrepreneur who sells lawn mowers might decide that the best business location would be in the": {
+            "choices": ["inner city.", "suburbs.", "financial district.", "rural areas."],
+            "answer": 1
+        },
+        "The statement \"the demand for an economic product varies inversely with its price\" is a definition of": {
+            "choices": ["the Law of Demand.", "laissez-faire.", "the Law of Competition.", "the Law of Supply and Demand."],
+            "answer": 0
+        },
+        "Because the demand for local telephone service is relatively inelastic,": {
+            "choices": ["modest price increases have little or no impact on quantity demanded.", "the government cannot tax telephone rates.", "consumers should make as few long-distance calls as possible.", "the number of telephones in the home has increased."],
+            "answer": 0
+        },
+        "The law of downward sloping demand indicates that": {
+            "choices": ["consumer demand has increased significantly.", "consumer demand has not changed significantly.", "consumer demand has dropped drastically.", "consumers demand more at lower prices."],
+            "answer": 3
+        },
+        "A business raised the price of a product to increase profits, but found that total revenues went down. The\ndemand for the product is": {
+            "choices": ["elastic.", "inelastic.", "unit elastic.", "unable to be determined due to lack of information."],
+            "answer": 0
+        },
+        "If the increase in the price of butter causes a decrease in demand for French pastries,": {
+            "choices": ["the marginal utility for additional pastries is diminishing.", "the two goods are substitutes.", "the demand for pastries is inelastic.", "the two goods are complements."],
+            "answer": 3
+        },
+        "A consumer is less likely to buy more and more units of a product at the same price because of": {
+            "choices": ["diminishing marginal utility.", "demand elasticity.", "the substitution effect.", "the existence of complementary goods."],
+            "answer": 0
+        },
+        "When a department store lowers the price of a product during a sale, it is counting on": {
+            "choices": ["diminishing marginal utility.", "the Law of Demand.", "the demand curve for the product to shift to the right.", "an inelastic demand for the product."],
+            "answer": 1
+        },
+        "A business that sells office supplies might have the greatest chance of success in": {
+            "choices": ["the suburbs.", "rural areas.", "urban areas.", "farming communities.\nName:"],
+            "answer": 2
+        },
+        "The Law of Demand states that": {
+            "choices": ["the relative change in price is caused by changes in demand.", "the demand for an economic product varies inversely with its price.", "consumers select alternative ways of spending income.", "the relationship between changing prices and total receipts is a direct one."],
+            "answer": 1
+        },
+        "The basic decision for a supplier is": {
+            "choices": ["how much to produce without regard to demand.", "the amount to offer for sale at various prices.", "the willingness of consumers to purchase.", "the ability of consumers to purchase."],
+            "answer": 1
+        },
+        "Demand is based on consumer purchase, whereas supply is based on": {
+            "choices": ["the ability to purchase.", "the willingness to purchase.", "producers offering products for sale.", "offering a wide range of prices."],
+            "answer": 2
+        },
+        "If the price of a product falls, producers will generally": {
+            "choices": ["offer less for sale.", "increase input.", "offer more for sale.", "hold a clearance sale."],
+            "answer": 0
+        },
+        "The supply curve is the mirror image of": {
+            "choices": ["the Law of Supply.", "production estimates.", "supply elasticities.", "the demand curve."],
+            "answer": 3
+        },
+        "In a market economy, the producer has": {
+            "choices": ["no control of production levels.", "always followed traditional methods of production.", "the freedom to adjust production.", "to fulfill government quotas of production."],
+            "answer": 2
+        },
+        "Depreciation is the": {
+            "choices": ["purchasing of new equipment.", "cost of shipping goods.", "gradual wear and tear on capital goods.", "variable cost of labor."],
+            "answer": 2
+        },
+        "Consumer purchases determine demand, whereas supply is determined by": {
+            "choices": ["a wide range of prices.", "a willingness to purchase.", "the ability to purchase.", "producers offering products for sale."],
+            "answer": 3
+        },
+        "The quantity supplied increases when": {
+            "choices": ["the cost of inputs goes down.", "taxes go down.", "additional firms enter the industry.", "the price of the product goes up.\nName:"],
+            "answer": 3
+        },
+        "The demand curve is the mirror image of": {
+            "choices": ["the Law of Supply.", "production estimates.", "supply elasticities.", "the supply curve."],
+            "answer": 3
+        },
+        "Prices serve as a link between producers and": {
+            "choices": ["natural resources.", "the factors of production.", "government.", "consumers."],
+            "answer": 3
+        },
+        "An advantage of a free market is": {
+            "choices": ["that everyone has excess income.", "the limited number of alternative products.", "that food and housing are very inexpensive.", "that the market finds its own equilibrium."],
+            "answer": 3
+        },
+        "Price flexibility works to resolve the problems of": {
+            "choices": ["microeconomics.", "market economies.", "surpluses and shortages.", "administrative costs."],
+            "answer": 2
+        },
+        "If a competitive market is at equilibrium, and if there is a sudden increase in demand, then": {
+            "choices": ["a temporary shortage will occur and the price will rise.", "a temporary surplus will occur and the price will fall.", "a temporary shortage will occur and the price will fall.", "a temporary surplus will occur and the price will rise."],
+            "answer": 0
+        },
+        "Price competition is a characteristic of a": {
+            "choices": ["market economy.", "traditional society.", "command economy.", "corporate state."],
+            "answer": 0
+        },
+        "At a given price, a surplus occurs when": {
+            "choices": ["the quantity demanded is more than the quantity supplied.", "the quantity demanded is the same as the quantity supplied.", "the quantity supplied is less than the quantity demanded.", "the quantity supplied is greater than the quantity demanded."],
+            "answer": 3
+        },
+        "Prices serve as a link between consumers and": {
+            "choices": ["natural resources.", "producers.", "government.", "the factors of production."],
+            "answer": 1
+        },
+        "In a market economy, a low price is a signal for": {
+            "choices": ["producers to supply more and consumers to buy less.", "producers and consumers to buy more.", "producers to offer less and consumers to buy more.", "government to step in and protect producers.\nName:"],
+            "answer": 2
+        },
+        "The problems of temporary market surpluses and shortages can be solved through": {
+            "choices": ["microeconomics.", "price supports.", "price floors.", "price flexibility."],
+            "answer": 3
+        },
+        "What is the fundamental problem of economics?": {
+            "choices": ["scarcity", "capital", "the factors of production", "labor"],
+            "answer": 0
+        },
+        "Which of the following is NOT a capital good?": {
+            "choices": ["a bulldozer at a construction site", "a cash register at a clothing store", "an oven at a bakery", "a television set for sale at an appliance store"],
+            "answer": 3
+        },
+        "Imagine you decide to purchase a soccer ball for $35.00. Which of the following is an opportunity cost of\nyour decision?": {
+            "choices": ["the time spent deciding to spend your money on a soccer ball", "something else you wanted that could have been bought for $35.00", "35.00 in cash", "the time spent making the purchase and the tax paid on the ball"],
+            "answer": 1
+        },
+        "When a country that produces only two goods is producing on its production possibilities frontier, the\ndecision to produce more of good A means that": {
+            "choices": ["more of good B also will be produced.", "the same amount of good B will be produced.", "less of good B must be produced.", "there are no opportunity costs involved."],
+            "answer": 2
+        },
+        "What term refers to the value of a trade-off?": {
+            "choices": ["production possibility", "opportunity cost", "choice", "frontier"],
+            "answer": 1
+        },
+        "Which of the following is an example of a service?": {
+            "choices": ["hair spray", "a haircut", "scissors", "a blow dryer"],
+            "answer": 1
+        },
+        "Which of the following is an example of a good?": {
+            "choices": ["a car", "a tune-up", "a car wash", "an oil change"],
+            "answer": 0
+        },
+        "What is a free enterprise economy?": {
+            "choices": ["an economy in which consumers and privately owned businesses make the majority of\nbasic economic decisions", "an economy in which the government make the majority of basic economic decisions", "an economy that is free of markets", "an economy that is free from a circular flow of economic activity\nName:"],
+            "answer": 0
+        },
+        "Which of the following is NOT a strength of a market economy?": {
+            "choices": ["It can adjust to change over time.", "It gives producers and consumers a great deal of freedom.", "It has decentralized decision-making.", "It supports all of its people equally."],
+            "answer": 3
+        },
+        "Which of the following is likely to occur in a traditional economy?": {
+            "choices": ["A new factory opens to produce computer chips.", "A father teaches his son how to clear land for crops.", "A new clothing fashion increases the profits of textile mills.", "A large government agency decides to build more warships."],
+            "answer": 1
+        },
+        "Who would you most likely find participating in a market economy?": {
+            "choices": ["a government official deciding how much wheat to plant this season", "a teenage girl deciding how to spend the extra money she earned working overtime", "a hunter deciding where to hunt to provide his family with a meal that night", "a worker deciding to leave his job early because the production quota has been met"],
+            "answer": 1
+        },
+        "Which is an example of economic growth?": {
+            "choices": ["When a new ball bearing plant opens, 1,500 jobs are created.", "The price of vegetables increases sharply in the spring.", "An employer is fined for refusing to hire women to fill new job openings.", "A man decides to quit working as a waiter and begin a career in marketing."],
+            "answer": 0
+        },
+        "All of the following are characteristics of a free enterprise economy EXCEPT": {
+            "choices": ["economic freedom.", "government control.", "voluntary exchange.", "private property."],
+            "answer": 1
+        },
+        "Why are entrepreneurs important in a free enterprise economy?": {
+            "choices": ["Entrepreneurs don't pay taxes.", "Entrepreneurs help define the seven economic and social goals.", "Entrepreneurs pay high wages to their employees.", "Entrepreneurs start new businesses."],
+            "answer": 3
+        },
+        "How do consumers exercise their power in the American economy?": {
+            "choices": ["by deciding what to purchase.", "by working for businesses.", "by becoming entrepreneurs", "by saving their money"],
+            "answer": 0
+        },
+        "The government plays all of the following roles in the American economy EXCEPT": {
+            "choices": ["protector of consumers.", "regulator of business.", "central planner deciding what to produce.", "consumer of products."],
+            "answer": 2
+        },
+        "What is the main strength of the corporate form of business organization?": {
+            "choices": ["ease of raising financial capital", "ease of establishment", "ease of management", "freedom from business income taxes\nName:"],
+            "answer": 0
+        },
+        "All of the following are strengths of the partnership form of business organization EXCEPT": {
+            "choices": ["ease of management.", "limited life.", "ease of establishment.", "lack of special taxes."],
+            "answer": 1
+        },
+        "The demand curve is always": {
+            "choices": ["upward sloping.", "downward sloping.", "level.", "irregular."],
+            "answer": 1
+        },
+        "A demand curve shows that": {
+            "choices": ["more will be purchased at low prices than at high ones.", "less will be purchased at low prices than at high ones.", "approximately the same amount will be purchased at low prices than at higher prices.", "all people have the ability, desire, and willingness to pay."],
+            "answer": 0
+        },
+        "What is the best description of the relationship between a demand schedule and a demand curve?": {
+            "choices": ["A demand curve is part of a demand schedule.", "A demand schedule is created from a demand curve.", "The two present the same information in different ways.", "There is no relationship between the two."],
+            "answer": 2
+        },
+        "Which of the following would cause a change in quantity demanded of a product?": {
+            "choices": ["changing consumer tastes", "increasing consumer income", "decreasing the price of the product", "changing prices of related products"],
+            "answer": 2
+        },
+        "How does the demand curve respond to an increase in demand?": {
+            "choices": ["the curve shifts left", "the curve shifts right", "there is movement along the curve", "there is no change in the curve"],
+            "answer": 1
+        },
+        "Identify the term that refers to the following economic principle: the more units of an economic product a\nperson acquires, the less eager that person is to buy still more.": {
+            "choices": ["Law of Demand", "change in quantity demanded", "substitution effect", "diminishing marginal utility"],
+            "answer": 3
+        },
+        "All of the following are examples of complements EXCEPT": {
+            "choices": ["butter and margarine.", "flashlights and batteries.", "peanut butter and jelly.", "cameras and film."],
+            "answer": 0
+        },
+        "All of the following products have relatively inelastic demands EXCEPT": {
+            "choices": ["physician's services.", "tobacco products.", "stereo equipment.", "food products.\nName:"],
+            "answer": 2
+        },
+        "A change in the quantity supplied is a change in the amount offered for sale in response to": {
+            "choices": ["greater demand.", "a change in price.", "an increase in productivity.", "new technology."],
+            "answer": 1
+        },
+        "The supply curve is": {
+            "choices": ["upward sloping.", "downward sloping.", "level.", "irregular."],
+            "answer": 0
+        },
+        "What is the equilibrium price in a market?": {
+            "choices": ["the price that creates a shortage", "the price that creates a surplus", "the price that creates neither a shortage nor a surplus", "the price that creates both a shortage and a surplus"],
+            "answer": 2
+        },
+        "If there is a shortage in a market, the price is likely to": {
+            "choices": ["increase.", "decrease.", "remain the same.", "fluctuate."],
+            "answer": 0
+        },
+        "If there is a surplus in a market, the price is likely to": {
+            "choices": ["increase.", "decrease.", "remain the same.", "fluctuate."],
+            "answer": 1
+        },
+        "The adjustment process in a competitive market moves toward": {
+            "choices": ["surplus.", "shortage.", "equilibrium.", "capitalism."],
+            "answer": 2
+        }
+    }
+}

@@ -1,0 +1,405 @@
+{
+    "context": "Skyrim sentence completion",
+    "questions": {
+        "He's making too much racket and I'm trying to get Vex drunk. So I tell him": {
+            "choices": ["any time.", "keep away from there!", "to keep it down and he just runs me through.", "Gate. This one's closed."],
+            "answer": 2
+        },
+        "Surprised to see you": {
+            "choices": ["a sword for a hoe, my friend.", "robbed it? Why? Why are you doing this to me?", "working. Mulush almost broke your arm yesterday.", "Malacath boil your blood and grind your bones."],
+            "answer": 2
+        },
+        "Damn it,": {
+            "choices": ["I want to talk to you.", "this will not stand!", "aid the legions, just for a few days, it could tip the scales in the Empire's favor.", "their bad side, you know?"],
+            "answer": 1
+        },
+        "It's immoral to worship a man. And it's also illegal. A": {
+            "choices": ["faithful Imperial citizen would know that. ", "is the pain? Any better?", "come in.", "They're still in charge."],
+            "answer": 0
+        },
+        "You get to kill the Emperor. The bloody Emperor. You'd better": {
+            "choices": ["our grave yet. I just know it.", "enjoy this one. You owe us all that much. So make it bloody, painful, and spectacular.", "Cheydinhal for me, that would make up for your blunder.", "Hmm?"],
+            "answer": 1
+        },
+        "We ought dig a big hole, throw all them dark elves and": {
+            "choices": ["Argonians in it, and let 'em tear each other to pieces.", "worry I don't have much time left.", "Maybe after the baby is born, we should move to Hammerfell.", "Nargh!"],
+            "answer": 0
+        },
+        "Looks like": {
+            "choices": ["Yes, Grelod.", "do for her damn mill.", "you got someone already.", "buy myself a longship to sail the rivers of Skyrim."],
+            "answer": 2
+        },
+        "Come to think of it, I haven't": {
+            "choices": ["that my parents are in Morthal.", "seen Svidi in a while. Wait... he didn't...", "down my life for the Unholy Matron. But that is an age long since passed. Astrid is my matron now.", "just not today."],
+            "answer": 1
+        },
+        "I've spent a long time building up a list": {
+            "choices": ["of contacts for goods from all over Tamriel.", "life. I'll never forget the warmth that spread through my heart when we embraced.", "done. You don't have to hate a man to kill him.", "be public - anyone in Solitude can attend."],
+            "answer": 0
+        },
+        "Are you joking? You": {
+            "choices": ["just rented a room from me.", "steward, he'll listen to you.", "does little to protect us these days.", "to me?"],
+            "answer": 0
+        },
+        "Caves sounded more exciting in": {
+            "choices": ["funds, and without hijacking our supplies and soldiers. Let Haafingar rebuild.", "the bard's songs.", "against the idea, but why?", "sale, too. If you're interested, talk to the steward, in the keep."],
+            "answer": 1
+        },
+        "The Skyforge? Aye, my clan-fathers have worked it since": {
+            "choices": ["is no spoon, it's a fork! Nobody can eat soup with a fork!", "work? It might suit you.", "the first Gray-Manes came to Whiterun.", "good money for a pint of ale to warm my bones!"],
+            "answer": 2
+        },
+        "New in town, right? If": {
+            "choices": ["you need a place to sleep, head over to the Winking Skeever. We keep a fine inn.", " ", "matters to me is keeping my wife safe. I won't let anyone harm her.", "us all lawless beasts. I'm proof of their ignorance."],
+            "answer": 0
+        },
+        "It's the root that looks like an": {
+            "choices": ["fair sum in gold for it.", "formality. I've always been in charge around here.", "ugly little man.", "Not again!"],
+            "answer": 2
+        },
+        "Is everything well with you, my": {
+            "choices": ["hear the one about the Breton and the bear-tamer?", "scaly friend?", "did this?", "to Dead Man's Drink."],
+            "answer": 1
+        },
+        "Never. Not until we turn this mine around, drive Beitild out of business, and": {
+            "choices": ["have dedicated their lives to solving the mystery of the Dwemers' disappearance.", "Shadows consume you.", "planning to attack me again...", "force her to apologize to me for everything she's done!"],
+            "answer": 3
+        },
+        "Can't": {
+            "choices": ["do it.", "Istlod died, the moot voted to make Torygg High King of Skyrim.", "would only leave us defenseless. The rebels would storm the palace in an afternoon.", "better. I'm loyal to Dengeir first and the Empire second."],
+            "answer": 0
+        },
+        "Like a novice picking an impossible lock or a blind man": {
+            "choices": ["to harvest somewhere! This is getting absurd.", "have it no other way.", "closer to understanding than you realize.", "suddenly turning to face you as you reach for his pocket?"],
+            "answer": 3
+        },
+        "You, of all": {
+            "choices": ["to do is please you.", "brought us quite the meal.", "people. Get out!", "of the guests went someplace they shouldn't. Caused quite a commotion."],
+            "answer": 2
+        },
+        "This is": {
+            "choices": ["with with the general in person.", "why I avoid being social.", "it on!", "you need a cure or a poison."],
+            "answer": 1
+        },
+        "I": {
+            "choices": ["need some more ale, Orgnar.", "to me. I have remedies and cures, should you need them.", "sighted just south of the city, flying around Lost Tongue Overlook.", "should I suppose."],
+            "answer": 0
+        },
+        "All it would take is a small force of": {
+            "choices": ["So who's goin' to stand up for us now?", "guard to go into the Ratway and flush them out.", "Empire that united Tamriel, but his first known battle and victory was right here.", "in a long line."],
+            "answer": 1
+        },
+        "These graves hold the sons and": {
+            "choices": ["the Sepulcher at all costs!", "noise. I've heard that cave-ins can start that way.", "daughters of Falkreath.", "uncomfortable with the presence of the College."],
+            "answer": 2
+        },
+        "I don't": {
+            "choices": ["that killer. I swear it.", "games, face your death!", "Agh!", "think we have anything to discuss, Stormcloak."],
+            "answer": 3
+        },
+        "I could smelt metal in half the time as you weak-willed": {
+            "choices": ["pink-skins. Do I have to do everything?", "on, friend.", "we like living here. Been here all our lives.", "swing is a right terrible sight..."],
+            "answer": 0
+        },
+        "I really don't mean to be rude, friend,": {
+            "choices": ["not. Do you understand? So please. Be a girl. For me.", "Please, take these few coins, for services rendered.", "Farewell, kinsman.", "but I'm not feeling particularly sociable..."],
+            "answer": 3
+        },
+        "My parents dropped me off here a year ago. But": {
+            "choices": ["given some real authority.", "our trading ships. Falk, you've got to do something about this.", "they're coming back to get me. They said so.", "runs rampant and the threat of war is driving away business."],
+            "answer": 2
+        },
+        "Break the law": {
+            "choices": ["didn't all grow up in dwarven ruins, you know.", "in Markarth, and it's off to Cidhna Mine with you.", "of Azura are you?", "too much already."],
+            "answer": 1
+        },
+        "The Ratway is somewhere under Riften, shouldn't be": {
+            "choices": ["the Jarl if you need something, stranger.", "unfeeling bitch.", "you to cross me.", "too tough to find."],
+            "answer": 3
+        },
+        "Leave": {
+            "choices": ["me be. I'm no harm here.", " ", "think there's a need for that!", "pale. Could be Ataxia. It's quite a problem back home in Cyrodiil."],
+            "answer": 0
+        },
+        "I guess I should be getting": {
+            "choices": ["Kill.", "I've any interest in that sort of thing.", "back to work. It was more fun talking, though.", "get food, too. And if there's not enough ore mined up, we don't get any."],
+            "answer": 2
+        },
+        "You brought this": {
+            "choices": ["since Bothela is gone.", "the right to do whatever we want.  ", "war over some forsaken scrap of land.", "on yourself!"],
+            "answer": 3
+        },
+        "Murder!": {
+            "choices": ["still here.", "Murder!", "pleasure, thane.", "what I wanted. Not at all."],
+            "answer": 1
+        },
+        "It is a fine": {
+            "choices": ["day to work the mines.", "ourselves here. For that, I thank you.", "can't just ignore them, Aerin.", "if I'm going to run an inn someday."],
+            "answer": 0
+        },
+        "Ancano is exactly why we're so": {
+            "choices": ["I swore an oath? No, it was because he was a good man and a true friend.", "restrictive about access to the College. We'd all have perished if it weren't for you.", "in your arse will take your mind off your troubles.", "earned the name. Now keep it to yourself."],
+            "answer": 1
+        },
+        "The Eye of Magnus. Here,": {
+            "choices": ["but lost. Slipped through our grasp. Oh, what we might have learned.", "this important?", "been keeping you well.", "that we should go there."],
+            "answer": 0
+        },
+        "The Stormcloaks were forced to retake the Reach on our own, but that taste of": {
+            "choices": ["another Forsworn sent to rot here in this mine.", "independence emboldened them. And the Forsworn were born.", "sip in your flagon, it'll taste just as good as the first!", "me? Okay."],
+            "answer": 1
+        },
+        "Take care of yourself, and always remember: the world is ripe": {
+            "choices": ["it was, but he did it.", "standing here.", "with people looking to spill your blood...", "my reward. Kill or be killed!"],
+            "answer": 2
+        },
+        "Leave me be,": {
+            "choices": ["I wouldn't do for a set of that.", "war has been hard on us.", "my progress at the College.", "Imperial. I haven't got anything to say to you."],
+            "answer": 3
+        },
+        "Are you new around here? You should go to the inn": {
+            "choices": ["Dorthe, who made her a new doll last week?", "coming, my son?", "if you need a place to stay.", "would have it no other way."],
+            "answer": 2
+        },
+        "You think you know pain? Do you!? Try watching your wife and daughter burn alive": {
+            "choices": ["best thing that could have happened. But even I didn't anticipate this.", "wealthy one, too, hm?", "Ainethach. He's in charge.", "after they've been ravaged by brigands! That's pain, my friend."],
+            "answer": 3
+        },
+        "Not anymore.": {
+            "choices": [" ", "Thanks to you. Friend.", "what then? No, no... I can't bear the thought.", "the Hist guide us."],
+            "answer": 1
+        },
+        "How are your": {
+            "choices": ["Noooo....", "things like you always have.", "from the Reach.", "students coming along?"],
+            "answer": 3
+        },
+        "Let me out of here, damn it!": {
+            "choices": ["won't hurt the girl to eat it this once.", "I'm not a criminal!", "all there is to it.", "long after their masters disappeared."],
+            "answer": 1
+        },
+        "The Empire didn't think we could": {
+            "choices": ["unrest in the Gray Quarter.", "demons dared! To um... visit upon him all which they feared!", "take the Reach, but here we are.", "about, girl. Tears won't change what you've done."],
+            "answer": 2
+        },
+        "Hey! Wanna play": {
+            "choices": ["We've all got our problems.", "moment, Rune. What did you think about my idea?", "tag?", "I want to go fight something."],
+            "answer": 2
+        },
+        "Hello, my friend.": {
+            "choices": ["have your blood...", "if you get arrested don't blame it on me.", "Quaestor.", "Come to visit the forge?"],
+            "answer": 3
+        },
+        "Very": {
+            "choices": ["Horker skin, actually.", "well.", "you think it's because of the Forsworn threat?", "my father who started me swinging the pickaxe when I was a barefoot little girl."],
+            "answer": 1
+        },
+        "Yes, that's right. Whether or not I'm interested depends on": {
+            "choices": ["reception will be public - anyone in Solitude can attend.", "what you've got, of course.", "I don't want to talk.", "the warriors around you. These are the true sons and daughters of Skyrim. See her strength and nobility in their eyes."],
+            "answer": 1
+        },
+        "Stendarr protect Falkreath": {
+            "choices": ["type of scum.", "have a question about infusions of arrowroot.", "until Skyrim's Sons rise.", "when his mother died, but he ran away."],
+            "answer": 2
+        },
+        "Mjoll the Lioness used to adventure across Skyrim before she settled down in Riften. I hear it all": {
+            "choices": ["rotting carcass away from me!", "Mind the way.", "ended when she lost her enchanted blade.", "to mentor the young thing so he focuses a lot of attention on her."],
+            "answer": 2
+        },
+        "Falkreath's cemetery reminds of us that war is": {
+            "choices": ["mines today. Damn Nords should bleed for putting us through this!", "if the two of you are collaborating on research!", "in here.", "not new here."],
+            "answer": 3
+        },
+        "On your way": {
+            "choices": ["been looking for you everywhere!", "up the 7,000 Steps again, Klimmek?", "Battle-Born?", "fletching supplies, you should see Fihada. I'm just the apprentice."],
+            "answer": 1
+        },
+        "Eternal": {
+            "choices": ["fools I could do without.", "slumber awaits...", "a nasty spill.", "in all of Skyrim!"],
+            "answer": 1
+        },
+        "If those Whiterun guards can take down a dragon,": {
+            "choices": ["All right, then.", "and ply my trade with the Thieves Guild than risk a contract on my head.", "so can we.", "the marketplace tomorrow. You won't find better prices in all of Eastmarch."],
+            "answer": 2
+        },
+        "It's off": {
+            "choices": ["to Cidhna Mine for you.", "forward to fighting him for chiefdom one day.", "ha ha ha! You wish to defeat me? Impossible.", "should consider her light a beacon in the storm."],
+            "answer": 0
+        },
+        "The guards in Dragonsreach say you've aided the Jarl. On behalf": {
+            "choices": ["well preserved. There isn't even a hint of rust.", "bothering me.", "of Whiterun, I thank you.", "Dirge works in their hideout."],
+            "answer": 2
+        },
+        "Bryling's obsession with honor and tradition": {
+            "choices": ["Gah!", "have no right to spread rumors around town about me.", "until the war has ended.", "is quaint, but politically irrelevant."],
+            "answer": 3
+        },
+        "Grelka, how fast": {
+            "choices": ["forward to it.", "can you get your hands on some longbows?", "Go right on in. ", "it can stand up to the classics!"],
+            "answer": 1
+        },
+        "That I do. I had a messenger from Dragon": {
+            "choices": ["I may.", "Bridge stop here on his way to the Blue Palace, not too long ago.", "a ruin, ripe for the plunder. Deepwood Redoubt. Far to the northwest...", "there no love left between us?"],
+            "answer": 1
+        },
+        "Ulfric Stormcloak's head": {
+            "choices": ["the plunder. Deepwood Redoubt. Far to the northwest...", "on a pike.", "dare go up there unless they've no choice.", " "],
+            "answer": 1
+        },
+        "Never mind your mother, Hreinn. You listen": {
+            "choices": ["to me, and you'll be a great man one day.", "if I can be of any assistance.", "when I can make far more at the gambling table.", "mortal."],
+            "answer": 0
+        },
+        "But tomorrow.": {
+            "choices": ["hate to be in their shoes if they get discovered.", "my loyalty, and perhaps I do.", "pines for the dead wives, the less time he spends finding a new one.", "Definitely."],
+            "answer": 3
+        },
+        "But we don't get any shipments in. Forsworn attack every caravan. So all I do": {
+            "choices": ["is sit here and drink.", "you here before, egg sister. Welcome!", "It's an old Nord proverb.", "say that? This mine was filled with draugr not too long ago."],
+            "answer": 0
+        },
+        "There's been a group called the Companions for over 4000 years. It's": {
+            "choices": ["[QUOTE]Grimsever,[QUOTE] within a Dwemer ruin. I took it as a sign that I was wasting my days in search of wealth.", "I have to know... why are you buying something for Noster?", "been many different things in that time.", "gold and the affections of wenches. He dishonors our traditions."],
+            "answer": 2
+        },
+        "Three weeks? You're mad! You can't keep": {
+            "choices": ["line and keep it at that.", "living in a place like this, but the money's good.", "the stand closed for that long!", "Oof!"],
+            "answer": 2
+        },
+        "And then I told her about": {
+            "choices": ["the vampires and how much they would pay me for her.", "He's always been a bit of a grouch.", "well.", "Oh Saadia..."],
+            "answer": 0
+        },
+        "You'll hear some": {
+            "choices": ["of the brighter faces around here talk about honor and glory.", "Thonar. Only a mad woman would ever betray the Silver-Blood family.", "Kynesgrove... Why? Why there? Is no place safe?", "to live here after his mother died. He escaped. And..."],
+            "answer": 0
+        },
+        "Well met, friend.": {
+            "choices": ["a great deal to learn.", "not a blacksmith.", "friend? Knock down a house?", "How can I help you?"],
+            "answer": 3
+        },
+        "If that's what you really believe, then you're a fool.": {
+            "choices": ["things out. Experiment, I guess.", "Never had much patience for fools, myself.", "you to take care of something.", "familiar face so far from home."],
+            "answer": 1
+        },
+        "Don't think you'll get special": {
+            "choices": ["you to halt!", "treatment just because you have a house in the city...", "paid with their blood.", "to you. I did a count at the meadery and we're four cases short... again."],
+            "answer": 1
+        },
+        "Astrid has arranged for your escape, no? Then you have nothing to worry": {
+            "choices": ["mind what I said. Now get back to work.", "My mother, Murbul, knows several.", "about. Get in, kill the Emperor, and get out. Then, we celebrate.", "of harsh."],
+            "answer": 2
+        },
+        "We have Shield-Siblings to keep": {
+            "choices": ["you've got what it takes!", "over in Understone Keep, have him forge you some new armor...", "Black-Briars. If you need dirt on anything, I'm your guy.", "our backs as dangerous as our fronts."],
+            "answer": 3
+        },
+        "What": {
+            "choices": ["with or do you just want to talk?", "Master Wizard. Certainly didn't anticipate that.", "a waste.", "anything if I don't go and check up on him."],
+            "answer": 2
+        },
+        "I'm not building a ship, sir. I'm trying": {
+            "choices": ["to make things grow.", "listen to more of your fantasies.", "I'm sorry.", "my errands."],
+            "answer": 0
+        },
+        "Please! Don't hurt": {
+            "choices": ["me again!", "the view from time to time!", "Never had much patience for fools, myself.", "the tavern for supper?"],
+            "answer": 0
+        },
+        "I'll": {
+            "choices": ["few coins, or you can simply browse at your leisure.", "city, friend. This here axe in full swing is a right terrible sight...", "show you a real fight!", "obviously thought Niruin was ready, but I was wrong."],
+            "answer": 2
+        },
+        "First war, and now dragons. Everywhere they go, the": {
+            "choices": ["Nords bring nothing but ruin.", "Stormcloak sympathizer or a fool. Either way, you're no friend of mine.", "Take his words with a grain of salt.", "from the smelter is too much."],
+            "answer": 0
+        },
+        "Very much": {
+            "choices": ["there's something you'd like to confess?", "of me to make such a suggestion.", "so.", "poor family, I had to learn how to steal if I wanted to make ends meet."],
+            "answer": 2
+        },
+        "If you were": {
+            "choices": ["that will be necessary.", "I may have some work for you.", "getting them from my farm, they'd be twice as fresh.", "have the little bits, too."],
+            "answer": 2
+        },
+        "Travel southeast and you'll find an Orc": {
+            "choices": ["Imperial?", "Get 'em Hewnon!", "stronghold, up around the old Dushnikh orichalcum mine.", "may I help you, my daughter?"],
+            "answer": 2
+        },
+        "Come back": {
+            "choices": ["later and I may have some work for you.", "house in the city. ", "without its problems, but the Empire is here to maintain order.", "Kynareth be with you."],
+            "answer": 0
+        },
+        "Come on!": {
+            "choices": ["your betters!", "Come on!", "than a little jealous, to greet the new Arch-Mage.", "is it now?"],
+            "answer": 1
+        },
+        "They named me Thane, and they got my nephew Siddgeir in my place. A": {
+            "choices": ["can't dig down far enough.", "so much.", "real friend to Cyrodiil, that one.", " "],
+            "answer": 2
+        },
+        "Brigands I can handle, but this": {
+            "choices": ["gray specks in the snow.", "talk of dragons? World's gone mad, I say.", "guess the battles I won yesterday won't win today's wars.", "right, dear."],
+            "answer": 1
+        },
+        "It's all": {
+            "choices": ["in this note.", "The whole place is crawling with draugr.", "problems with the Empire.", "to send against us."],
+            "answer": 0
+        },
+        "If you see Reyda, tell her that Narfi misses her and to come home": {
+            "choices": ["can I get you?", "alone, I'll be your best friend... forever! I'll pay you, too! My whole life's savings - two septims!", "soon... very soon. Soon... soon, like the moon!", "often, Thadgeir."],
+            "answer": 2
+        },
+        "What's the matter, friend? Khajiit got your": {
+            "choices": ["then.", "anyone in the Reach that isn't a Nord.", "tongue? Maybe you need a little ditty to loosen your gob, hmm?", "graves in this cemetery never decreases."],
+            "answer": 2
+        },
+        "I wonder what": {
+            "choices": ["-- all of you -- very closely.", "great battles were fought here?", "my partner blocking the way.", "It's anyone's guess."],
+            "answer": 1
+        },
+        "Hard to believe people": {
+            "choices": ["caused enough problems; don't need you or anyone else adding to them.", "actually have to work in places like this.", "need to get snippy.", "only brother from drinking himself to death."],
+            "answer": 1
+        },
+        "When Aventus took off, when he said those things, about killing Grelod...": {
+            "choices": ["okay. I'll deal with it.", "war will ever end?", "you cross the Guild.", "I never imagined he was serious..."],
+            "answer": 3
+        },
+        "All that matters is that I": {
+            "choices": ["some wine.", "have what you need. And it's worth every septim.", "just stand there! Kill her!", "from me?"],
+            "answer": 1
+        },
+        "Grelod ain't going to like some": {
+            "choices": ["war with Leigelf? Isn't he your husband?", "a drink? You name it.", "Whiterun city guard? The gate's closed.", "stranger just hangin' around. Not that I care."],
+            "answer": 3
+        },
+        "They've been raiding the farms for food, and supplies are scarcer": {
+            "choices": ["there fighting for us. She wouldn't have had to, if it weren't for Roggvir.", "than ever. Maybe I should sell swords and armor, instead.", "god was once Tiber Septim the man, and this is his Empire.", "us quite the meal."],
+            "answer": 1
+        },
+        "What's the Jarl going": {
+            "choices": ["would chose to reside down here is beyond me.", "to do about it?", "What do you need?", "in Riften, we may as well close up shop."],
+            "answer": 1
+        },
+        "Come to Dragonsreach to discuss": {
+            "choices": ["the ongoing hostilities, like the rest of the [QUOTE]great warriors[QUOTE]? ", "not. Those are just tales...", "I'm getting bored.", "damn you!"],
+            "answer": 0
+        },
+        "I came home to Skyrim when it": {
+            "choices": ["speak again.", "as you forge. Let your hatred work the steel.", "do turnips next. Hmmm... Or maybe radishes?", "was all over. But I wasn't much good at anything other than fighting."],
+            "answer": 3
+        },
+        "I'll...": {
+            "choices": ["get you!", "sorry for intruding.", "can't eat nothin' and my head feels like a furnace. I've seen better days.", "should talk again sometime."],
+            "answer": 0
+        },
+        "Thongvor may be the head of the family,": {
+            "choices": ["can get my daughter's head out of the clouds?", "but I'm the hands.", "was nowhere near that murder weapon.", "me rich. It keeps me going."],
+            "answer": 1
+        },
+        "Tulvur! I've": {
+            "choices": ["just completed inspection of the farmhouse.", "to treat someone properly.", "got himself some new friends among the Empire's nobles.", "ring? The one with the inscription?"],
+            "answer": 0
+        }
+    }
+}

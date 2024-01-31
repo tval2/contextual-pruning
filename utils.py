@@ -1,3 +1,39 @@
+import os
+import tqdm
+import json
+import torch
+import gdown
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import transformers as tfmr
+import jsbeautifier as jsb
+
+from functools import partial
+from torch import nn
+from datasets import Dataset
+
+Byte = 8
+KiB = 1024 * Byte
+MiB = 1024 * KiB
+GiB = 1024 * MiB
+ORD_A = ord('A')
+ORD_a = ord('a')
+
+
+class LLMTokenizedDataset(Dataset):
+    def __init__(self, encodings):
+        self.encodings = encodings
+
+    def __len__(self):
+        return len(self.encodings.input_ids)
+
+    def __getitem__(self, idx):
+        # Directly return the sliced tensors, without creating new ones
+        return {key: val[idx] for key, val in self.encodings.items()}
+
+
 # From Lab 1
 def get_model_sparsity(model: nn.Module) -> float:
     """
@@ -9,6 +45,7 @@ def get_model_sparsity(model: nn.Module) -> float:
         num_nonzeros += param.count_nonzero()
         num_elements += param.numel()
     return 1 - float(num_nonzeros) / num_elements
+
 
 # From Lab 1
 def get_num_parameters(model: nn.Module, count_nonzero_only=False) -> int:
@@ -24,6 +61,7 @@ def get_num_parameters(model: nn.Module, count_nonzero_only=False) -> int:
             num_counted_elements += param.numel()
     return num_counted_elements
 
+
 # From Lab 4
 def get_model_size(model: nn.Module, data_width=16, group_size=-1):
 
@@ -35,8 +73,9 @@ def get_model_size(model: nn.Module, data_width=16, group_size=-1):
         num_elements += param.numel()
     return num_elements * data_width
 
+
 # From Lab 1
-def get_model_size2(model: nn.Module, data_width=32, count_nonzero_only=False) -> int:
+def get_model_size_lab1(model: nn.Module, data_width=32, count_nonzero_only=False) -> int:
     """
     calculate the model size in bits
     :param data_width: #bits per element
@@ -44,10 +83,6 @@ def get_model_size2(model: nn.Module, data_width=32, count_nonzero_only=False) -
     """
     return get_num_parameters(model, count_nonzero_only) * data_width
 
-Byte = 8
-KiB = 1024 * Byte
-MiB = 1024 * KiB
-GiB = 1024 * MiB
 
 def get_true_model_size(model, count_nonzero_only=False, include_buffers=True, data_width=None):
     param_size = 0
@@ -64,12 +99,46 @@ def get_true_model_size(model, count_nonzero_only=False, include_buffers=True, d
 
     return param_size + buffer_size
 
+
+def collect_stats(model):
+    stats = {
+        "sparsity": get_model_sparsity(model),
+        "nonzero_params": get_num_parameters(model, count_nonzero_only=True).item(),
+        "num_params": get_num_parameters(model),
+        "nonzero_32b_size": get_model_size_lab1(model, count_nonzero_only=True).item(),
+        "32b_size": get_model_size(model, data_width=32, group_size=128),
+        "nonzero_size": get_true_model_size(model, count_nonzero_only=True).item(),
+        "size": get_true_model_size(model),
+    }
+    return stats
+
+
+def show_model_stats(model, test_data=None, baseline=None):
+    stats = collect_stats(model)
+    print(f'\nsparsity: {stats["sparsity"]:.2f}')
+    print(f'params: {stats["num_params"] / 1000000:.2f} M')
+    print(f'non-zero params: {stats["nonzero_params"] / 1000000:.2f} M')
+    print(f'32bit model size (only nonzero): {stats["nonzero_32b_size"] / MiB:.2f} MiB')
+    print(f'32bit model size: {stats["32b_size"] / MiB:.2f} MiB')
+    print(f'current model size (only nonzero): {stats["nonzero_size"] / MiB:.2f} MiB')
+    print(f'current model size: {stats["size"] / MiB:.2f} MiB')
+    model_perplexity = None
+    if type(test_data) is not type(None):
+        model_perplexity = evaluate(model, test_data)
+        if baseline is not None:
+            print(f"base perplexity: {baseline:.3f}")
+            print(f"\nmodel perplexity: {model_perplexity}")
+    if baseline is not None:
+        print(f"percent perplexity increase: {100 * (model_perplexity - baseline) / model_perplexity:.3f}%")
+    return model_perplexity
+
+
 # From Lab 4
-def evaluate(model, testenc, batch_size=2048):
+def evaluate(model, testenc, batch_size=2048, device=None):
     nsamples = 40
     nlls = []
     for i in tqdm.tqdm(range(nsamples), desc="evaluating..."):
-        batch = testenc[:, (i * batch_size):((i + 1) * batch_size)].to(model.device)
+        batch = testenc[:, (i * batch_size):((i + 1) * batch_size)].to(device=device)
         with torch.no_grad():
             lm_logits = model(batch).logits
         shift_logits = lm_logits[:, :-1, :].contiguous().float()
@@ -78,18 +147,19 @@ def evaluate(model, testenc, batch_size=2048):
         loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
         neg_log_likelihood = loss.float() * batch_size
         nlls.append(neg_log_likelihood)
-    if i == nsamples - 1:
-        batch.to("cpu")
-        del batch
-        torch.cuda.empty_cache()
+        if i == nsamples - 1:
+            batch.to("cpu")
+            del batch
+            torch.cuda.empty_cache()
 
     return torch.exp(torch.stack(nlls).sum() / (nsamples * batch_size))
 
-def get_calib_dataset(testenc, batch_size=2048):
+
+def get_calib_dataset(testenc, batch_size=2048, device=None):
     nsamples = 40
     samples = []
     for i in tqdm.tqdm(range(nsamples), desc="evaluating..."):
-        batch = testenc[:, (i * batch_size):((i + 1) * batch_size)].to(model.device)
+        batch = testenc[:, (i * batch_size):((i + 1) * batch_size)].to(device=device)
         samples.append(batch)
     if i == nsamples - 1:
         batch.to("cpu")
@@ -97,8 +167,9 @@ def get_calib_dataset(testenc, batch_size=2048):
         torch.cuda.empty_cache()
     return samples
 
+
 @torch.no_grad()
-def get_calib_feat(model, testenc, full_dict=dict()):
+def get_calib_feat(model, testenc, full_dict=dict(), device=None):
     linear_input_neuron_dict, linear_output_neuron_dict = dict(), dict()
     def neuron_hook_linear(m, x, y, name):
         if isinstance(x, tuple):
@@ -147,7 +218,7 @@ def get_calib_feat(model, testenc, full_dict=dict()):
     print("Collecting neuron values...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    samples = get_calib_dataset(testenc)
+    samples = get_calib_dataset(testenc, device=device)
     pbar = tqdm.tqdm(samples)
 
     try:
@@ -168,6 +239,7 @@ def get_calib_feat(model, testenc, full_dict=dict()):
     full_dict['linear_output'] = linear_output_neuron_dict
     full_dict['activations'] = act_dict
     return full_dict
+
 
 # This function just reorganizes the dictionary above into a dataframe
 def flatten_neuron_dict(neuron_dict, neuron_type):
@@ -191,37 +263,73 @@ def flatten_neuron_dict(neuron_dict, neuron_type):
     df = pd.DataFrame(flat_data)
     return df
 
-def plot_nonembed_neurons(neuron_df, one_curve=True):
-  # Sort the DataFrame by 'AverageMagnitude' in descending order
-  # Reset index to get a new column representing the sorted neuron indices
-  col = 'SmallestAverageMagnitude'
 
-  # Create the plot
-  eps = np.finfo(float).eps
-  plt.figure(figsize=(12, 6))
-  if one_curve:
-    sorted_all = neuron_df.sort_values(by=col, ascending=False)
-    sorted_all.reset_index(drop=True, inplace=True)
-    plt.plot(sorted_all[col].replace(0, eps), marker='o', markersize=2, linestyle='-', linewidth=1, label='All Neurons')
-  else:
-    sorted_input_linear = neuron_df.query("NeuronType == 'linear_input'").sort_values(by=col, ascending=False)
-    sorted_input_linear.reset_index(drop=True, inplace=True)
-    sorted_output_linear = neuron_df.query("NeuronType == 'linear_output'").sort_values(by=col, ascending=False)
-    sorted_output_linear.reset_index(drop=True, inplace=True)
-    sorted_activations = neuron_df.query("NeuronType == 'activations'").sort_values(by=col, ascending=False)
-    sorted_activations.reset_index(drop=True, inplace=True)
-    plt.plot(sorted_input_linear[col].replace(0, eps), marker='o', markersize=2, linestyle='-', linewidth=1, label='Input Linear Neurons')
-    plt.plot(sorted_output_linear[col].replace(0, eps), marker='s', markersize=2, linestyle='-', linewidth=1, label='Output Linear Neurons')
-    plt.plot(sorted_activations[col].replace(0, eps), marker='x', markersize=2, linestyle='-', linewidth=1, label='Activation Neurons')
-  plt.yscale('log')
-  plt.xscale('log')
-  plt.title('Average Neuron Magnitudes of Neurons')
-  plt.xlabel('Neuron Index (sorted)')
-  plt.ylabel('Average Neuron Magnitude')
-  plt.grid(True)
-  plt.legend()
-  plt.show()
-  return plt
+def plot_nonembed_neurons(neuron_df, one_curve=True):
+    # Sort the DataFrame by 'AverageMagnitude' in descending order
+    # Reset index to get a new column representing the sorted neuron indices
+    col = "SmallestAverageMagnitude"
+
+    # Create the plot
+    eps = np.finfo(float).eps
+    plt.figure(figsize=(12, 6))
+    if one_curve:
+        sorted_all = neuron_df.sort_values(by=col, ascending=False)
+        sorted_all.reset_index(drop=True, inplace=True)
+        plt.plot(
+            sorted_all[col].replace(0, eps),
+            marker="o",
+            markersize=2,
+            linestyle="-",
+            linewidth=1,
+            label="All Neurons",
+        )
+    else:
+        sorted_input_linear = neuron_df.query(
+            "NeuronType == 'linear_input'"
+        ).sort_values(by=col, ascending=False)
+        sorted_input_linear.reset_index(drop=True, inplace=True)
+        sorted_output_linear = neuron_df.query(
+            "NeuronType == 'linear_output'"
+        ).sort_values(by=col, ascending=False)
+        sorted_output_linear.reset_index(drop=True, inplace=True)
+        sorted_activations = neuron_df.query("NeuronType == 'activations'").sort_values(
+            by=col, ascending=False
+        )
+        sorted_activations.reset_index(drop=True, inplace=True)
+        plt.plot(
+            sorted_input_linear[col].replace(0, eps),
+            marker="o",
+            markersize=2,
+            linestyle="-",
+            linewidth=1,
+            label="Input Linear Neurons",
+        )
+        plt.plot(
+            sorted_output_linear[col].replace(0, eps),
+            marker="s",
+            markersize=2,
+            linestyle="-",
+            linewidth=1,
+            label="Output Linear Neurons",
+        )
+        plt.plot(
+            sorted_activations[col].replace(0, eps),
+            marker="x",
+            markersize=2,
+            linestyle="-",
+            linewidth=1,
+            label="Activation Neurons",
+        )
+    plt.yscale("log")
+    plt.xscale("log")
+    plt.title("Average Neuron Magnitudes of Neurons")
+    plt.xlabel("Neuron Index (sorted)")
+    plt.ylabel("Average Neuron Magnitude")
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+    return plt
+
 
 def get_special_tokens(tokenizer):
     """
@@ -243,6 +351,7 @@ def get_special_tokens(tokenizer):
 
     return special_tokens
 
+
 def count_all_tokens(data, tokenizer):
     max_token_id = max(tokenizer.get_vocab().values())
     token_counts = torch.zeros(max_token_id + 1, dtype=torch.long, device = data.device)
@@ -251,39 +360,21 @@ def count_all_tokens(data, tokenizer):
     token_counts.scatter_add_(0, unique_tokens, counts)
     return token_counts
 
-def plot_token_frequencies(normalized_counts, special_tokens):
-  sorted_counts, sorted_indices = torch.sort(normalized_counts, descending=True)
-  plt.figure(figsize=(8, 6))
-  plt.plot(sorted_counts.cpu().numpy(), label="Token Frequencies")
-  plt.xlabel("Token (sorted)")
-  plt.ylabel("Normalized Frequency")
-  plt.xscale('log')
-  plt.yscale('log')
-  plt.title("Token Frequencies Sorted by Frequency Value")
-  plt.legend()
-  plt.show()
-  print(f"Percent of tokens with freq of 0: {100*(normalized_counts <= 0).sum() / normalized_counts.shape[0]:0.2f}")
-  return plt
 
-BASELINE = 0
-def show_model_stats(model, test_data=None, set_baseline=False):
-    global BASELINE
-    print(f'\nsparsity: {get_model_sparsity(model):.2f}')
-    print(f'params: {get_num_parameters(model)/1000000:.2f} M')
-    print(f'non-zero params: {get_num_parameters(model, count_nonzero_only=True)/1000000:.2f} M')
-    print(f'32bit model size (only nonzero): {get_model_size2(model, count_nonzero_only=True)/ MiB:.2f} MiB')
-    print(f"32bit model size: {get_model_size(model, data_width=32, group_size=128)/MiB:.2f} MiB")
-    print(f"current model size (only nonzero): {get_true_model_size(model, count_nonzero_only=True)/MiB:.2f} MiB")
-    print(f"current model size: {get_true_model_size(model)/MiB:.2f} MiB")
-    model_perplexity = None
-    if type(test_data) is not type(None):
-        model_perplexity = evaluate(model, test_data)
-        if set_baseline:
-            BASELINE = model_perplexity
-        print(f"base perplexity: {BASELINE:.3f}")
-        print(f"\nmodel perplexity: {model_perplexity}")
-    print(f"percent perplexity increase: {BASELINE / model_perplexity:.3f}")
-    return model_perplexity
+def plot_token_frequencies(normalized_counts):
+    sorted_counts, _ = torch.sort(normalized_counts, descending=True)
+    plt.figure(figsize=(8, 6))
+    plt.plot(sorted_counts.cpu().numpy(), label="Token Frequencies")
+    plt.xlabel("Token (sorted)")
+    plt.ylabel("Normalized Frequency")
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.title("Token Frequencies Sorted by Frequency Value")
+    plt.legend()
+    plt.show()
+    print(f"Percent of tokens with freq of 0: {100*(normalized_counts <= 0).sum() / normalized_counts.shape[0]:0.2f}")
+    return plt
+
 
 def ask(model, tokenizer, prompt, max_new=10):
     text_tokens = tokenizer(prompt, return_tensors='pt')
@@ -291,6 +382,7 @@ def ask(model, tokenizer, prompt, max_new=10):
     with torch.no_grad():
         pred = model.generate(inp, max_new_tokens=max_new)
     return tokenizer.decode(pred.squeeze(0))
+
 
 def construct_prompt(
         question, choices, context="", question_number=None,
@@ -310,6 +402,7 @@ def construct_prompt(
     prompt += question + '\n' + choices_str + suffix
     return prompt
 
+
 def best_choice_by_perplexity(model, tokenizer, question, choices, letter_choices=True, question_choice_concat=' '):
     perplexities = []
 
@@ -328,6 +421,7 @@ def best_choice_by_perplexity(model, tokenizer, question, choices, letter_choice
     if letter_choices:
         answer = chr(ORD_A + answer - 1)
     return answer
+
 
 def model_question_eval(
         model, tokenizer, dataset, question_numbers=True, letter_choices=True,
@@ -388,23 +482,6 @@ def model_question_eval(
         for count in [correct_count, confident_correct_count, best_guess_correct_count]
     ]
 
-# Used to generate en_tw_translaion dataset (random seed = 1234)
-def en_tw_question_gen(num_choices=4, num_questions=None):
-    dataset_len = len(en_tw_dataset['ch'])
-    generated = 0
-    for i, en_text in enumerate(en_tw_dataset['en']):
-        if num_questions and generated == num_questions:
-            break
-        correct_answer_text = en_tw_dataset['ch'][i]
-        choices = [correct_answer_text]
-        choices += [
-            en_tw_dataset['ch'][r]
-            for r in random.sample(range(dataset_len), num_choices - 1)
-        ]
-        random.shuffle(choices)
-        answer_idx = choices.index(correct_answer_text)
-        yield en_text, {"choices": choices, "answer": answer_idx}
-        generated += 1
 
 def create_pruning_mask(model):
   pruning_mask = {}
@@ -414,10 +491,12 @@ def create_pruning_mask(model):
           pruning_mask[name] = mask
   return pruning_mask
 
+
 def apply_pruning_mask(model, pruning_mask):
     for name, param in model.named_parameters():
         if name in pruning_mask and hasattr(param.grad, "data"): # For some reason some params have .grad.data = None when USE_8BIT = True
             param.grad.data.mul_(pruning_mask[name])
+
 
 def train(model, dataloader, optimizer, scheduler, pruning_mask, dtype=None):
     model.train()
@@ -443,6 +522,7 @@ def train(model, dataloader, optimizer, scheduler, pruning_mask, dtype=None):
     avg_loss = total_loss / len(dataloader)
     return avg_loss
 
+
 def evaluate_ft(model, dataloader, dtype=None):
     model.eval()
     if dtype is not None:
@@ -462,13 +542,15 @@ def evaluate_ft(model, dataloader, dtype=None):
 
     return perplexity.item()
 
-class LLMTokenizedDataset(Dataset):
-    def __init__(self, encodings):
-        self.encodings = encodings
 
-    def __len__(self):
-        return len(self.encodings.input_ids)
+def load_json(path: str, binary=False, encoding="utf-8"):
+    with open(path, f"r{'b' if binary else ''}", encoding=encoding) as file:
+        return json.load(file)
 
-    def __getitem__(self, idx):
-        # Directly return the sliced tensors, without creating new ones
-        return {key: val[idx] for key, val in self.encodings.items()}
+
+def save_json(obj: dict, save_path: str, indent_size=4):
+    options = jsb.default_options()
+    options.indent_size = indent_size
+    with open(save_path, "w+", encoding="utf-8") as file:
+        results_str = jsb.beautify(json.dumps(obj), options)
+        file.write(results_str)
