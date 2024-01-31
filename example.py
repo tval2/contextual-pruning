@@ -24,7 +24,6 @@ from utils import(
     get_special_tokens, count_all_tokens, create_pruning_mask, train, evaluate_ft
 )
 from dataset import make_text_datasets
-from datasets import load_dataset
 
 USE_8BIT = False
 DEVICE = "cuda:0"

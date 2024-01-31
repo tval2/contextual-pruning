@@ -1,8 +1,6 @@
-import os
 import tqdm
 import json
 import torch
-import gdown
 
 import matplotlib.pyplot as plt
 import numpy as np
